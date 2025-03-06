@@ -6,17 +6,28 @@ body {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .grid {
   display: grid;
+  grid-gap: 64px;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-columns-with-first-narrow {
   grid-template-columns: 1fr 2fr 2fr;
 }
 
 section {
   max-width: 1200px;
-
+  padding: 100px 0;
   margin: 0 auto;
 }
 
@@ -31,7 +42,6 @@ header {
 }
 
 header h1 {
-  text-align: center;
   font-weight: 700;
   font-size: 96px;
   line-height: 1;
@@ -41,16 +51,14 @@ header h1 {
 header h2 {
   font-weight: 400;
   font-size: 40px;
-  line-height: 100%;
+  line-height: 1.5;
   margin: 0;
-  text-align: center;
 }
 
 header h3 {
-  text-align: center;
   font-weight: 900;
   font-size: 24px;
-  line-height: 100%;
+  line-height: 1.5;
   letter-spacing: 5px;
   margin: 0;
 }
@@ -59,7 +67,7 @@ header a {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
-  color: rgba(39, 32, 68, 1);
+  color: #272044;
   background: white;
   text-align: center;
   display: inline-block;
@@ -68,6 +76,38 @@ header a {
   text-transform: uppercase;
   text-decoration: none;
   padding: 16px 32px;
+}
+
+main {
+  background-color: white;
+}
+
+main h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 5px;
+  color: #272044;
+  opacity: 0.3;
+  text-transform: uppercase;
+}
+
+main h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  color: #272044;
+  margin: 0;
+}
+
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #272044;
+  opacity: 0.7;
 }
 
 footer {
@@ -80,7 +120,6 @@ footer {
 
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0;
 }
 
 footer h3 {
@@ -93,7 +132,7 @@ footer p {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 footer ul {
@@ -127,7 +166,12 @@ footer a {
     font-size: 12px;
   }
 
-  header a {
-    font-size: 10px;
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+
+  section {
+    padding: 30px;
   }
 }
